@@ -1,6 +1,6 @@
 language: cpp
 os: linux
-dist: trusty
+dist: xenial
 
 install:
   - sudo apt-get install software-properties-common

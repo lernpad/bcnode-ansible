@@ -19,7 +19,6 @@
     - rustc
     - cargo
     - nodejs
-    - yarn
   tags: pkg-install
   become: true
 

@@ -12,5 +12,6 @@
   with_items:
     - git
     - mc
+    - curl
   tags: pkg-install
   become: true

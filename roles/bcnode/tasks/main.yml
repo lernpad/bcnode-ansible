@@ -11,7 +11,7 @@
   shell: echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
   become: true
 
-- name: install deps
+- name: install deps 1
   apt:
     name={{ item }}
     state=present
@@ -19,6 +19,15 @@
     - rustc
     - cargo
     - nodejs
+    - yarn
+  tags: pkg-install
+  become: true
+
+- name: install deps 2
+  apt:
+    name={{ item }}
+    state=present
+  with_items:
     - yarn
   tags: pkg-install
   become: true

@@ -11,6 +11,12 @@
   shell: echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
   become: true
 
+- name: update repositories cache
+  apt:
+    update_cache: yes
+  tags: pkg-install
+  become: true
+
 - name: install deps 1
   apt:
     name={{ item }}
